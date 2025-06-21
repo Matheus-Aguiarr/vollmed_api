@@ -1,11 +1,11 @@
 package com.vollmed.apirest.controllers;
 
-import com.vollmed.apirest.dtos.MedicoDTO;
-import com.vollmed.apirest.dtos.MedicoDetailDTO;
-import com.vollmed.apirest.dtos.MedicoRequestDTO;
-import com.vollmed.apirest.dtos.MedicoResponseDTO;
-import com.vollmed.apirest.model.MedicoModel;
-import com.vollmed.apirest.repositories.MedicoRepository;
+import com.vollmed.apirest.dtos.medico.MedicoDTO;
+import com.vollmed.apirest.dtos.medico.MedicoDetailDTO;
+import com.vollmed.apirest.dtos.medico.MedicoRequestDTO;
+import com.vollmed.apirest.dtos.medico.MedicoResponseDTO;
+import com.vollmed.apirest.domain.medico.MedicoModel;
+import com.vollmed.apirest.domain.medico.repository.MedicoRepository;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,8 +15,6 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/medicos")
@@ -44,7 +42,7 @@ public class MedicoController {
 
     @GetMapping("/{id}")
     public ResponseEntity<MedicoDetailDTO> getMedicoById(@PathVariable Long id) {
-        MedicoModel searchMedico = medicoRepository.findById(id).orElseThrow(() -> new RuntimeException("MedicoNotFound."));
+        MedicoModel searchMedico = medicoRepository.getReferenceById(id);
         return ResponseEntity.ok(new MedicoDetailDTO(searchMedico));
     }
 

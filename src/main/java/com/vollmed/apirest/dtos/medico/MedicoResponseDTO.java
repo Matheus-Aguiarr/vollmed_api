@@ -1,7 +1,7 @@
-package com.vollmed.apirest.dtos;
+package com.vollmed.apirest.dtos.medico;
 
-import com.vollmed.apirest.enums.Especialidade;
-import com.vollmed.apirest.model.MedicoModel;
+import com.vollmed.apirest.domain.medico.Especialidade;
+import com.vollmed.apirest.domain.medico.MedicoModel;
 
 public record MedicoResponseDTO(Long id, String nome, String email, String crm, Especialidade especialidade) {
     public MedicoResponseDTO(MedicoModel medicoModel) {

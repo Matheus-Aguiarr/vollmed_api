@@ -1,7 +1,8 @@
-package com.vollmed.apirest.model;
+package com.vollmed.apirest.domain.paciente;
 
-import com.vollmed.apirest.dtos.PacienteDTO;
-import com.vollmed.apirest.dtos.PacienteRequestDTO;
+import com.vollmed.apirest.domain.endereco.EnderecoModel;
+import com.vollmed.apirest.dtos.paciente.PacienteDTO;
+import com.vollmed.apirest.dtos.paciente.PacienteRequestDTO;
 import jakarta.persistence.*;
 
 @Entity

@@ -1,5 +1,6 @@
-package com.vollmed.apirest.dtos;
+package com.vollmed.apirest.dtos.paciente;
 
+import com.vollmed.apirest.dtos.endereco.EnderecoDTO;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

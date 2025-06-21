@@ -1,12 +1,9 @@
-package com.vollmed.apirest.repositories;
+package com.vollmed.apirest.domain.medico.repository;
 
-import com.vollmed.apirest.model.MedicoModel;
+import com.vollmed.apirest.domain.medico.MedicoModel;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
-
-import java.util.Optional;
 
 public interface MedicoRepository extends JpaRepository<MedicoModel, Long> {
 

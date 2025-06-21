@@ -1,6 +1,6 @@
-package com.vollmed.apirest.model;
+package com.vollmed.apirest.domain.endereco;
 
-import com.vollmed.apirest.dtos.EnderecoDTO;
+import com.vollmed.apirest.dtos.endereco.EnderecoDTO;
 import jakarta.persistence.Embeddable;
 
 

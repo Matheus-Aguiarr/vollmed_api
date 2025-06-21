@@ -1,6 +1,6 @@
-package com.vollmed.apirest.dtos;
+package com.vollmed.apirest.dtos.paciente;
 
-import com.vollmed.apirest.model.PacienteModel;
+import com.vollmed.apirest.domain.paciente.PacienteModel;
 
 public record PacienteResponseDTO(Long id, String nome, String email, String cpf) {
 

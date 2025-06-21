@@ -1,10 +1,9 @@
-package com.vollmed.apirest.model;
+package com.vollmed.apirest.domain.medico;
 
-import com.vollmed.apirest.dtos.MedicoDTO;
-import com.vollmed.apirest.dtos.MedicoRequestDTO;
-import com.vollmed.apirest.enums.Especialidade;
+import com.vollmed.apirest.domain.endereco.EnderecoModel;
+import com.vollmed.apirest.dtos.medico.MedicoDTO;
+import com.vollmed.apirest.dtos.medico.MedicoRequestDTO;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "medicos")

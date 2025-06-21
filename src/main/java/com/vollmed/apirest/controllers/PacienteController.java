@@ -1,14 +1,12 @@
 package com.vollmed.apirest.controllers;
 
-import com.vollmed.apirest.dtos.PacienteDTO;
-import com.vollmed.apirest.dtos.PacienteDetailDTO;
-import com.vollmed.apirest.dtos.PacienteRequestDTO;
-import com.vollmed.apirest.dtos.PacienteResponseDTO;
-import com.vollmed.apirest.model.MedicoModel;
-import com.vollmed.apirest.model.PacienteModel;
-import com.vollmed.apirest.repositories.PacienteRepository;
+import com.vollmed.apirest.dtos.paciente.PacienteDTO;
+import com.vollmed.apirest.dtos.paciente.PacienteDetailDTO;
+import com.vollmed.apirest.dtos.paciente.PacienteRequestDTO;
+import com.vollmed.apirest.dtos.paciente.PacienteResponseDTO;
+import com.vollmed.apirest.domain.paciente.PacienteModel;
+import com.vollmed.apirest.domain.paciente.repository.PacienteRepository;
 import jakarta.transaction.Transactional;
-import jakarta.validation.Path;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -16,8 +14,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/pacientes")

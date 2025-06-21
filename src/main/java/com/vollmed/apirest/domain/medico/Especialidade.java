@@ -1,4 +1,4 @@
-package com.vollmed.apirest.enums;
+package com.vollmed.apirest.domain.medico;
 
 public enum Especialidade {
     ORTOPEDIA,
