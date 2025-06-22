@@ -29,11 +29,4 @@ public class GlobalHandlerExceptions {
         return new ResponseEntity<>(errors, HttpStatus.BAD_REQUEST);
     }
 
-    private record erroValidacaoDTO(String campo, String mensagem) {
-        public erroValidacaoDTO(FieldError ex) {
-            this(ex.getField(), ex.getDefaultMessage());
-        }
-
-
-    }
 }
